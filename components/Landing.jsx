@@ -108,7 +108,7 @@ const Landing = () => {
                         delay: 0.2
                     }}>
                     {/* add the ref attribute to the image element */}
-                    <Image ref={globeRef} className=' hover:scale-110 duration-300 ' src={'/globe.png'} width={400} alt='main phone' height={400} />
+                    <Image ref={globeRef} className='relative z-10 hover:scale-110 duration-300 ' src={'/globe.png'} width={400} alt='main phone' height={400} />
                 </motion.div>
             </div>
         </div>

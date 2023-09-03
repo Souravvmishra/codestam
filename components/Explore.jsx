@@ -2,6 +2,7 @@ import React, { useEffect, useState, useRef } from 'react';
 import Image from 'next/image';
 import ExploreSvg from './svg/ExploreSvg';
 import { gsap } from 'gsap'; // Import GSAP
+import ScrollTrigger from 'gsap/ScrollTrigger'
 import { motion } from 'framer-motion';
 
 const Item = ({ item, index }) => {
@@ -65,6 +66,41 @@ const Explore = () => {
             window.removeEventListener('resize', moveGlobeToStartup);
         };
     }, []);
+
+
+        // use useEffect hook to create a gsap tween with scrolltrigger
+        useEffect(() => {
+            // register scrolltrigger plugin
+            gsap.registerPlugin(ScrollTrigger)
+    
+            // create a gsap tween for the globe image
+            gsap.from(globeRef.current, {
+                // define the scrolltrigger options
+                scrollTrigger: {
+                    // use the globe image as the trigger element
+                    trigger: globeRef.current,
+                    // start the animation when the top of the image reaches the center of the viewport
+                    start: 'top bottom',
+                    // end the animation when the bottom of the image reaches 20% above the bottom of the viewport
+                    end: 'bottom top',
+                    // make the animation scrub with the scroll position
+                    scrub: true,
+    
+                },
+                // define the animation properties
+                // move the image 200px along the x-axis
+              
+                x: 450,
+                y : -550,
+                // rotate the image 360 degrees
+                rotate: 360,
+                scale : 4,
+                opacity : 0,
+                duration : 2,
+                // add some easing
+                ease: 'power2.inOut',
+            })
+        }, [])
 
     return (
         <div className="relative bg-csmidnight px-14">
