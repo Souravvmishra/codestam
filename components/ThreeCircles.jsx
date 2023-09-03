@@ -21,8 +21,8 @@ const ThreeCircles = () => {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: circles,
-        start: 'top 80%',
-        end: 'top 20%',
+        start: 'top bottom',
+        end: 'top top',
         scrub: true, // Allows smooth animation based on scroll
       },
     });
@@ -33,7 +33,7 @@ const ThreeCircles = () => {
 
     // Animate the center circle (circle2) if desired
     const circle2 = circles.querySelector('.circle2');
-    tl.from(circle2, { opacity: 0, scale: 0, duration: 0.5 }, '-=0.5');
+    tl.from(circle2, { opacity: 0, scale: 0, duration: 0.5 }, '-=1');
 
     // Fade out the lines as the circles close
     const line1 = circles.querySelector('.line1');
