@@ -9,6 +9,7 @@ import WhyCodestam from '@/components/WhyCodestam';
 import SpecialApproach from '@/components/SpecialApproach';
 import StartupSpecial from '@/components/StartupSpecial';
 import Footer from '@/components/Footer';
+import ThingWeDo from '@/components/ThingWeDo';
 
 export default function Home() {
   return (
@@ -23,7 +24,8 @@ export default function Home() {
         </div>
       </div>
       <Description />
-      <Explore />
+      <ThingWeDo />
+      {/* <Explore /> */}
       <div className='relative'
 
         style={{

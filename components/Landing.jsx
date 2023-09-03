@@ -24,9 +24,9 @@ const Landing = () => {
                 // use the globe image as the trigger element
                 trigger: globeRef.current,
                 // start the animation when the top of the image reaches the center of the viewport
-                start: 'top top',
+                start: 'top center',
                 // end the animation when the bottom of the image reaches 20% above the bottom of the viewport
-                end: 'bottom bottom',
+                end: 'bottom top',
                 // make the animation scrub with the scroll position
                 scrub: true,
 
@@ -34,8 +34,8 @@ const Landing = () => {
             // define the animation properties
             // move the image 200px along the x-axis
 
-            x: -430,
-            y: 820,
+            x: -250,
+            y: 400,
             // rotate the image 360 degrees
             rotate: 360,
             scale: 0,
@@ -56,7 +56,7 @@ const Landing = () => {
                         once: true
                     }}
                     className='relative text-6xl xl:text-7xl text-cswhite  font-extrabold  w-fit  '>
-                    <motion.span className='sm:leading-normal  '>Empowering Your Tech Vision :</motion.span>
+                    <motion.span className='sm:leading-normal  '>Empowering Your Tech Vision:</motion.span>
                     <motion.span className='text-cspurple'>
                         <Typewriter
                             options={{
