@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+import { motion } from 'framer-motion';
 import Image from 'next/image';
 import GetInTouch from './buttons/GetInTouch';
 
@@ -16,7 +17,7 @@ const WhyCodestam = () => {
     const section = sectionRef.current;
 
     // Set up the initial position of the globe
-    gsap.set(globe, { y: -1000, scale : 0, x : 500});
+    gsap.set(globe, { y: -1000, scale: 0, x: 500 });
 
     // Create a GSAP timeline for the animation
     const tl = gsap.timeline({
@@ -31,10 +32,10 @@ const WhyCodestam = () => {
     // Add animation to move the globe down
     tl.to(globe, {
       y: 0,
-      scale : 3, // Adjust the end position as needed
+      scale: 3, // Adjust the end position as needed
       duration: 1,
       x: 0,
-      rotate : 360 // Adjust the duration as needed
+      rotate: 360 // Adjust the duration as needed
     });
 
     // Return a cleanup function
@@ -59,13 +60,34 @@ const WhyCodestam = () => {
         />
       </div>
       <div className='max-w-[60vw]'>
-        <div className='text-3xl font-extrabold text-cspurple py-4'>Why Codestam ?</div>
+        <motion.div
+          initial={{ x: '-5rem', opacity: 0 }}
+          whileInView={{ x: '0', opacity: 100 }}
+          viewport={{
+            once: true
+          }}
+          transition={{ delay: .5 }}
+          className='text-3xl font-extrabold text-cspurple py-4'>Why Codestam ?</motion.div>
         <div className='font-bold text-white text-5xl mb-4 w-[75vw]'>
-          <span className='sm:leading-normal'>Crafting tomorrow's solutions through innovative software development.</span>
+          <motion.div
+            initial={{ x: '-5rem', opacity: 0 }}
+            whileInView={{ x: '0', opacity: 100 }}
+            viewport={{
+              once: true
+            }}
+            transition={{ delay: 0.6 }}
+            className='sm:leading-normal'>Crafting tomorrow's solutions through innovative software development.
+          </motion.div>
         </div>
-        <div className='text-cswhite text-2xl pb-8 text-justify'>
+        <motion.div className='text-cswhite text-2xl pb-8 text-justify'
+          initial={{ x: '-5rem', opacity: 0 }}
+          whileInView={{ x: '0', opacity: 100 }}
+          viewport={{
+            once: true
+          }}
+          transition={{ delay: 0.7 }}>
           Here at Codestam, we empower companies with expert tech support and deliver tailored software development solutions for businesses. Unlock your venture's potential with our comprehensive services tailored to meet your unique technological needs.
-        </div>
+        </motion.div>
         <GetInTouch />
       </div>
     </div>

@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import GetInTouch from './buttons/GetInTouch'
 import Image from 'next/image'
+import { motion } from 'framer-motion'
 
 const StartupSpecial = () => {
     const globeRef = useRef(null);
@@ -52,14 +53,33 @@ const StartupSpecial = () => {
             </div>
             <div className='max-w-[60vw]'>
 
-                <div className='text-3xl font-extrabold  text-cspurple py-4'>Special assist to startups</div>
+                <motion.div
+                    initial={{ x: '-5rem', opacity: 0 }}
+                    whileInView={{ x: '0', opacity: 100 }}
+                    viewport={{
+                        once: true
+                    }}
+                    transition={{ delay: .5 }}
+                    className='text-3xl font-extrabold  text-cspurple py-4'>Special assist to startups</motion.div>
                 <div className='font-bold text-white text-5xl mb-4  w-[75vw] '>
-                    <span className='sm:leading-normal  '>Transforming visions into reality through innovative software solutions.</span>
+                    <motion.div 
+                    initial={{ x: '-5rem', opacity: 0 }}
+                    whileInView={{ x: '0', opacity: 100 }}
+                    viewport={{
+                      once: true
+                    }}
+                    transition={{ delay: 0.6 }}className='sm:leading-normal  '>Transforming visions into reality through innovative software solutions.</motion.div>
 
                 </div>
-                <div className='text-cswhite text-2xl pb-8 text-justify'>
-                Elevate your startup's potential with our comprehensive tech support and bespoke software development solutions. We understand the unique challenges startups face and offer tailored assistance to navigate them seamlessly. Partner with us to unlock innovation, streamline operations, and propel your company's growth to new heights.
-                </div>
+                <motion.div className='text-cswhite text-2xl pb-8 text-justify'
+                 initial={{ x: '-5rem', opacity: 0 }}
+                 whileInView={{ x: '0', opacity: 100 }}
+                 viewport={{
+                   once: true
+                 }}
+                 transition={{ delay: 0.7 }}>
+                    Elevate your startup's potential with our comprehensive tech support and bespoke software development solutions. We understand the unique challenges startups face and offer tailored assistance to navigate them seamlessly. Partner with us to unlock innovation, streamline operations, and propel your company's growth to new heights.
+                </motion.div>
                 <GetInTouch />
             </div>
         </div>

@@ -8,6 +8,7 @@ import Explore from '@/components/Explore';
 import WhyCodestam from '@/components/WhyCodestam';
 import SpecialApproach from '@/components/SpecialApproach';
 import StartupSpecial from '@/components/StartupSpecial';
+import Footer from '@/components/Footer';
 
 export default function Home() {
   return (
@@ -23,15 +24,16 @@ export default function Home() {
       </div>
       <Description />
       <Explore />
-      <div  className='relative'
+      <div className='relative'
 
-      style={{
-                boxShadow: '0 22px  70px 4px rgba(0, 0, 0, 1)'
-            }}>
+        style={{
+          boxShadow: '0 22px  70px 4px rgba(0, 0, 0, 1)'
+        }}>
         <WhyCodestam />
         <StartupSpecial />
         <SpecialApproach />
       </div>
+      <Footer />
     </div>
   );
 }
