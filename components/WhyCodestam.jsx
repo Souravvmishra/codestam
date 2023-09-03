@@ -17,7 +17,7 @@ const WhyCodestam = () => {
     const section = sectionRef.current;
 
     // Set up the initial position of the globe
-    gsap.set(globe, { y: -1000, scale: 0, x: 500 });
+    gsap.set(globe, { y: -950, scale : 0.8, x: 300 });
 
     // Create a GSAP timeline for the animation
     const tl = gsap.timeline({
@@ -47,7 +47,10 @@ const WhyCodestam = () => {
   return (
     <div
       ref={sectionRef}
-      className="relative bg-csmidnight flex flex-col items-start justify-center py-8 px-24"
+      className="relative bg-csmidnight flex flex-col items-start justify-center py-8 px-24 "
+      style={{
+        boxShadow: '0 22px  70px 4px rgba(0, 0, 0, 1)'
+    }} 
     >
       <div>
         <Image

@@ -40,7 +40,11 @@ const StartupSpecial = () => {
         };
     }, []);
     return (
-        <div ref={sectionRef} className="relative bg-csmidnight  flex flex-col items-end justify-center   py-8  px-24"        >
+        <div ref={sectionRef}
+            style={{
+                boxShadow: '0 22px  70px 4px rgba(0, 0, 0, 1)'
+            }}
+            className="relative bg-csmidnight  flex flex-col items-end justify-center   py-8  px-24"        >
             <div>
                 <Image
                     ref={globeRef}
@@ -62,22 +66,22 @@ const StartupSpecial = () => {
                     transition={{ delay: .5 }}
                     className='text-3xl font-extrabold  text-cspurple py-4'>Special assist to startups</motion.div>
                 <div className='font-bold text-white text-5xl mb-4  w-[75vw] '>
-                    <motion.div 
-                    initial={{ x: '-5rem', opacity: 0 }}
-                    whileInView={{ x: '0', opacity: 100 }}
-                    viewport={{
-                      once: true
-                    }}
-                    transition={{ delay: 0.6 }}className='sm:leading-normal  '>Transforming visions into reality through innovative software solutions.</motion.div>
+                    <motion.div
+                        initial={{ x: '-5rem', opacity: 0 }}
+                        whileInView={{ x: '0', opacity: 100 }}
+                        viewport={{
+                            once: true
+                        }}
+                        transition={{ delay: 0.6 }} className='sm:leading-normal  '>Transforming visions into reality through innovative software solutions.</motion.div>
 
                 </div>
                 <motion.div className='text-cswhite text-2xl pb-8 text-justify'
-                 initial={{ x: '-5rem', opacity: 0 }}
-                 whileInView={{ x: '0', opacity: 100 }}
-                 viewport={{
-                   once: true
-                 }}
-                 transition={{ delay: 0.7 }}>
+                    initial={{ x: '-5rem', opacity: 0 }}
+                    whileInView={{ x: '0', opacity: 100 }}
+                    viewport={{
+                        once: true
+                    }}
+                    transition={{ delay: 0.7 }}>
                     Elevate your startup's potential with our comprehensive tech support and bespoke software development solutions. We understand the unique challenges startups face and offer tailored assistance to navigate them seamlessly. Partner with us to unlock innovation, streamline operations, and propel your company's growth to new heights.
                 </motion.div>
                 <GetInTouch />

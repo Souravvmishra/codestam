@@ -13,12 +13,13 @@ import ThingWeDo from '@/components/ThingWeDo';
 
 export default function Home() {
   return (
-    <div className='overflow-x-clip'>
-      <div className='bg-csmidnight   min-h-screen flex flex-col  justify-between border-b-2 '>
-        <div className='absolute   inset-0 w-screen h-screen'>
-          <Image src={'/flares.png'} width={10000} height={1000} alt='flares' />
-        </div>
-        <div className='relative'>
+    <div className='overflow-x-clip '>
+      <div className=''>
+
+        <div className='relative bg-csmidnight   min-h-screen flex flex-col  justify-between '>
+          <div className='absolute   inset-0 w-screen h-screen'>
+            <Image src={'/flares.png'} width={10000} height={1000} alt='flares' />
+          </div>
           <Navbar />
           <Landing />
         </div>

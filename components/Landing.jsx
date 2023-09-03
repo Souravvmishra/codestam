@@ -16,38 +16,35 @@ const Landing = () => {
     useEffect(() => {
         // register scrolltrigger plugin
         gsap.registerPlugin(ScrollTrigger)
+        // Create a timeline animation using GSAP
+        const tl = gsap.timeline();
 
-        // create a gsap tween for the globe image
-        gsap.to(globeRef.current, {
-            // define the scrolltrigger options
-            scrollTrigger: {
-                // use the globe image as the trigger element
-                trigger: globeRef.current,
-                // start the animation when the top of the image reaches the center of the viewport
-                start: 'top center',
-                // end the animation when the bottom of the image reaches 20% above the bottom of the viewport
-                end: 'bottom top',
-                // make the animation scrub with the scroll position
-                scrub: true,
 
-            },
-            // define the animation properties
-            // move the image 200px along the x-axis
-
-            x: -250,
-            y: 400,
-            // rotate the image 360 degrees
-            rotate: 360,
-            scale: 0,
-            opacity: 0,
-
-            // add some easing
-            ease: 'power2.inOut',
-        })
+        const globeP = globeRef.current.getBoundingClientRect()
+        const titleP = document.getElementsByClassName('circle2')[0].getBoundingClientRect()
+        console.log(globeP);
+        tl.to(
+            globeRef.current,
+            {
+                x: -450,
+                y: titleP.y - globeP.y - titleP.height / 2,
+                rotate: 360,
+                scale: 0.4,
+                opacity: 0,
+                ease: 'power2.inOut',
+                scrollTrigger: {
+                    trigger: '.main',
+                    start: 'top top',
+                    end: 'bottom top',
+                    duration: 5,
+                    scrub: true, // Allows smooth animation based on scroll
+                },
+            }
+        )
     }, [])
 
     return (
-        <div className='px-4 pt-6 md:pt-10 flex justify-evenly  flex-grow '>
+        <div className='px-4 pt-6 md:pt-10 flex justify-evenly  flex-grow main'>
             <div className='md:w-1/2'>
                 <motion.div
                     initial={{ x: '-5rem', opacity: 0 }}
@@ -55,7 +52,7 @@ const Landing = () => {
                     viewport={{
                         once: true
                     }}
-                    className='relative text-6xl xl:text-7xl text-cswhite  font-extrabold  w-fit  '>
+                    className=' text-6xl xl:text-7xl text-cswhite  font-extrabold  w-fit  '>
                     <motion.span className='sm:leading-normal  '>Empowering Your Tech Vision:</motion.span>
                     <motion.span className='text-cspurple'>
                         <Typewriter
@@ -63,9 +60,9 @@ const Landing = () => {
                                 strings: ['Innovate         ', 'Transform         ', 'Succeed         '],
                                 autoStart: true,
                                 loop: true,
-                                wrapperClassName : "neonText my-4 text-5xl"
+                                wrapperClassName: "neonText my-4 text-5xl"
                             }
-                        }
+                            }
                         ></Typewriter>
                     </motion.span>
 
@@ -120,7 +117,7 @@ const Landing = () => {
                         delay: 0.2
                     }}>
                     {/* add the ref attribute to the image element */}
-                    <Image ref={globeRef} className='relative z-10 hover:scale-110 duration-300 animate-pulse' src={'/globe.png'} width={400} alt='main phone' height={400} />
+                    <Image id='lGlobe' ref={globeRef} className='relative z-20 hover:scale-110 duration-300 animate-pulse' src={'/globe.png'} width={400} alt='main phone' height={400} />
                 </motion.div>
             </div>
         </div>

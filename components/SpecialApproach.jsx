@@ -39,7 +39,11 @@ const SpecialApproach = () => {
     };
   }, []);
   return (
-    <div ref={sectionRef} className="overflow-clip relative bg-csmidnight  flex flex-col items-start justify-center   py-8  px-24"        >
+    <div ref={sectionRef} className="overflow-clip relative bg-csmidnight  flex flex-col items-start justify-center   py-8  px-24"
+      style={{
+        boxShadow: '0 22px  70px 4px rgba(0, 0, 0, 1)'
+      }}
+    >
       <div>
         <Image
           ref={globeRef}
