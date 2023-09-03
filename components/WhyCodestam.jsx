@@ -56,7 +56,7 @@ const WhyCodestam = () => {
           width={100}
           height={100}
           alt='Globe'
-          className='absolute left-4 -bottom-20 backdrop-blur-md rounded-full opacity-50'
+          className='absolute left-4 -bottom-20 backdrop-blur-md rounded-full opacity-50 animate-pulse'
         />
       </div>
       <div className='max-w-[60vw]'>

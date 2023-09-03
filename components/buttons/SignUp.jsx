@@ -1,10 +1,14 @@
-import React from 'react'
 import Link from 'next/link'
+import React, {useState} from 'react'
+import ExploreSvg from '../svg/ExploreSvg'
 
 const SignUp = () => {
+  const [hover, setHover] = useState(true)
+
   return (
-    <div className='border-2 border-csslate bg-csslate hover:bg-cswhite  text-cswhite hover:text-cspurple  py-4 rounded-lg font-semibold cursor-pointer w-36 text-center duration-300'>
+    <div onMouseEnter={() => setHover(false)} onMouseLeave={() => setHover(true)} className='border-2 border-csgray bg-csslate hover:bg-cswhite  text-cswhite hover:text-cspurple  py-4 rounded-lg font-semibold cursor-pointer  text-center duration-300 flex items-center justify-center w-40 space-x-4'>
       <Link href={'#'}>Sign Up</Link>
+      <ExploreSvg hover={hover} setHover={setHover} />
     </div>
   )
 }

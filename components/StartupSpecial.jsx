@@ -48,7 +48,7 @@ const StartupSpecial = () => {
                     width={100}
                     height={100}
                     alt='Globe'
-                    className='absolute right-[50%] -bottom-20 backdrop-blur-md rounded-full opacity-50'
+                    className='absolute right-[50%] -bottom-20 backdrop-blur-md rounded-full animate-pulse opacity-50'
                 />
             </div>
             <div className='max-w-[60vw]'>
