@@ -129,7 +129,7 @@ const techServices = [
 
 const ThingWeDo = () => {
   return (
-    <div className='relative bg-csmidnight text-cswhite py-16  '
+    <div className='relative bg-[url("/flares.png")] bg-csmidnight text-cswhite py-16  '
       style={{
         boxShadow: '0 22px  70px 4px rgba(0, 0, 0, 1)'
       }}
@@ -139,13 +139,18 @@ const ThingWeDo = () => {
       </div>
       <div className="tech-services flex flex-wrap justify-center items-center px-24 ">
         {techServices.map((service, index) => (
-          <div key={index} className="tech-service   my-3 max-w-fit group">
-            <div className='max-w-fit bg-red-50 border-csslate border-2 rounded-full px-4 items-center justify-center  flex py-4 text-csmidnight space-x-4 m-2 text-center duration-300 cursor-pointer group-hover:shadow-lg shadow-cswhite relative group-hover:-translate-y-4 group-hover:mx-4  group-hover:px-8 group-hover:py-4'>
-              <div className='group-hover:scale-125 duration-300' dangerouslySetInnerHTML={{ __html: service.icon }}></div>
-              <p>{service.service}</p>
+          <button href="#_" class="relative inline-flex items-center justify-center px-10 py-4 overflow-hidden  font-medium tracking-tighter bg-cswhite  rounded-full group m-3 text-csmidnight hover:-translate-y-4 duration-300 hover:m-8">
+            <span class="absolute w-0 h-0 transition-all duration-500  bg-csmidnight  rounded-full group-hover:w-96 group-hover:h-96 ease-in-out "></span>
+            {/* <span class="absolute inset-0 w-full h-full -mt-1 rounded-lg opacity-30 bg-gradient-to-b from-transparent via-transparent to-gray-700"></span> */}
+            <div className='group-hover:scale-125 duration-300 group-hover:text-cswhite' dangerouslySetInnerHTML={{ __html: service.icon }}>
+              {/* Icon For Tag */}
             </div>
-          </div>
-        ))}
+            <p className='relative pl-4 font-bold group-hover:text-cswhite'>{service.service}</p>
+          </button>
+
+
+        ))
+        }
       </div>
     </div>
   )

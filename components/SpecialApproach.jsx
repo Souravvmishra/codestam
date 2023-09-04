@@ -39,7 +39,7 @@ const SpecialApproach = () => {
     };
   }, []);
   return (
-    <div ref={sectionRef} className="overflow-clip relative bg-csmidnight  flex flex-col items-start justify-center   py-8  px-24"
+    <div ref={sectionRef} className="overflow-clip relative bg-[url('/flares.png')]  bg-csmidnight  flex flex-col items-start justify-center   py-8  px-24"
       style={{
         boxShadow: '0 22px  70px 4px rgba(0, 0, 0, 1)'
       }}
@@ -57,9 +57,6 @@ const SpecialApproach = () => {
       <div className='max-w-[60vw]'
         initial={{ x: '-5rem', opacity: 0 }}
         whileInView={{ x: '0', opacity: 100 }}
-        viewport={{
-          once: true
-        }}
         transition={{ delay: .5 }}>
         <motion.div
           className='text-3xl font-extrabold  text-cspurple py-4'>Our special approach</motion.div>
@@ -67,9 +64,6 @@ const SpecialApproach = () => {
           <motion.div
             initial={{ x: '-5rem', opacity: 0 }}
             whileInView={{ x: '0', opacity: 100 }}
-            viewport={{
-              once: true
-            }}
             transition={{ delay: 0.6 }}
             className='sm:leading-normal  '>Transforming Ideas into Seamless Software Solutions.</motion.div>
 
@@ -77,9 +71,6 @@ const SpecialApproach = () => {
         <motion.div className='text-cswhite text-2xl pb-8 text-justify'
           initial={{ x: '-5rem', opacity: 0 }}
           whileInView={{ x: '0', opacity: 100 }}
-          viewport={{
-            once: true
-          }}
           transition={{ delay: 0.7 }}>
           We at Codestam underscores the process of turning abstract concepts into functional, user-friendly software products. It emphasizes the creative transformation of ideas into tangible digital solutions through careful planning, development, and ongoing maintenance, meeting specific needs and ensuring a smooth user experience.
         </motion.div>
