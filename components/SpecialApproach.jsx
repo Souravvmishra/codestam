@@ -39,7 +39,7 @@ const SpecialApproach = () => {
     };
   }, []);
   return (
-    <div ref={sectionRef} className="overflow-clip relative bg-[url('/flares.png')]  bg-csmidnight  flex flex-col items-start justify-center   py-8  px-4 md:px-8 xl:px-24"
+    <div ref={sectionRef} className=" relative bg-[url('/flares.png')]  bg-csmidnight  flex flex-col items-start justify-center   py-8  px-4 md:px-8 xl:px-24"
       style={{
         boxShadow: '0 22px  70px 4px rgba(0, 0, 0, 1)'
       }}
@@ -56,6 +56,9 @@ const SpecialApproach = () => {
       </div>
       <div className='md:max-w-[60vw]'>
         <motion.div
+          initial={{ x: '-5rem', opacity: 0 }}
+          whileInView={{ x: '0', opacity: 100 }}
+          transition={{ delay: .5 }}
           className='text-3xl font-extrabold  text-cspurple py-4'>Our special approach</motion.div>
         <div className='font-bold text-white text-5xl mb-4  md:w-[75vw] '>
           <motion.div

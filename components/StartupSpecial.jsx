@@ -44,7 +44,7 @@ const StartupSpecial = () => {
             style={{
                 boxShadow: '0 22px  70px 4px rgba(0, 0, 0, 1)'
             }}
-            className={`relative  bg-[url("/flares.png")] bg-csmidnight  flex flex-col items-end justify-center   py-8  px-4 md:px-8 xl:px-24 w-screen`}>
+            className={`relative  bg-[url("/flares.png")] bg-csmidnight  flex flex-col md:items-end justify-center   py-8  px-4 md:px-8 xl:px-24 w-screen`}>
             <div>
                 <Image
                     ref={globeRef}
@@ -56,7 +56,6 @@ const StartupSpecial = () => {
                 />
             </div>
             <div className='md:max-w-[60vw]'>
-
                 <motion.div
                     initial={{ x: '-5rem', opacity: 0 }}
                     whileInView={{ x: '0', opacity: 100 }}
