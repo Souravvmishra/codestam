@@ -134,14 +134,15 @@ const ThingWeDo = () => {
         boxShadow: '0 22px  70px 4px rgba(0, 0, 0, 1)'
       }}
     >
-      <div id='titleDesc' className='text-cspurple text-6xl text-center font-bold py-12'>
+      <div id='titleDesc' className='text-cspurple text-6xl text-center font-bold py-12'
+      >
         All Your Needs Covered
       </div>
-      <div className="tech-services flex flex-wrap justify-center items-center px-24 ">
+      <div className="tech-services flex flex-wrap justify-center items-center md:px-24 glow ">
         {techServices.map((service, index) => (
-          <button href="#_" class="relative inline-flex items-center justify-center px-10 py-4 overflow-hidden  font-medium tracking-tighter bg-cswhite  rounded-full group m-3 text-csmidnight hover:-translate-y-4 duration-300 hover:m-8">
-            <span class="absolute w-0 h-0 transition-all duration-500  bg-csmidnight  rounded-full group-hover:w-96 group-hover:h-96 ease-in-out "></span>
-            {/* <span class="absolute inset-0 w-full h-full -mt-1 rounded-lg opacity-30 bg-gradient-to-b from-transparent via-transparent to-gray-700"></span> */}
+          <button key={index} className="relative inline-flex items-center justify-center px-10 py-4 overflow-hidden  font-medium tracking-tighter bg-cswhite  rounded-full group m-3 text-csmidnight hover:-translate-y-4 duration-300 hover:m-8 ">
+            <span className="absolute w-0 h-0 transition-all duration-500  bg-csmidnight  rounded-full group-hover:w-96 group-hover:h-96 ease-in-out "></span>
+            <span className="absolute inset-0 w-full h-full -mt-1 rounded-lg opacity-30 bg-gradient-to-b from-transparent via-transparent to-gray-700"></span>
             <div className='group-hover:scale-125 duration-300 group-hover:text-cswhite' dangerouslySetInnerHTML={{ __html: service.icon }}>
               {/* Icon For Tag */}
             </div>

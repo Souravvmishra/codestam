@@ -44,23 +44,23 @@ const ThreeCircles = () => {
   }, []);
 
   return (
-    <div className="relative w-full pt-16 py-8" ref={circlesRef}>
+    <div className="relative w-full pt-16 py-8 scale-75 md:scale-90" ref={circlesRef}>
       {/* Lines */}
       <div className="absolute h-1 w-96 bg-csgray left-96 top-[50%] z-0 animate-pulse line1"></div>
       <div className="absolute h-1 w-96 bg-csgray right-96 top-[50%] z-0 animate-pulse line2"></div>
       {/* Lines */}
-      <div className="flex justify-evenly items-center">
-        <div className="relative w-44 h-44 bg-cswhite rounded-full circle1">
+      <div className="flex justify-evenly items-center  ">
+        <div className="relative w-44 h-44 bg-cswhite rounded-full circle1 aspect-square">
           <div className="absolute w-[80%] h-[80%] bg-cspurple rounded-full inset-[17px] "></div>
         </div>
 
-        <div className="relative z-1 w-64 h-64 bg-cswhite rounded-full circle2">
+        <div className="relative z-1 w-64 mx-4 h-64 bg-cswhite rounded-full circle2 aspect-square">
           <div className="absolute w-[80%] h-[80%] bg-red-400 rounded-full inset-[20px] animate-pulse">
             <Image src={'/globe.png'} width={250} height={250} alt="globe" />
           </div>
         </div>
 
-        <div className="relative z-1 w-44 h-44 bg-cswhite rounded-full circle3">
+        <div className="relative z-1 w-44 h-44 bg-cswhite rounded-full circle3 aspect-square">
           <div className="absolute w-[80%] h-[80%] bg-csgray rounded-full inset-[17px]"></div>
         </div>
       </div>

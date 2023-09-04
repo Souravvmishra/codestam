@@ -11,7 +11,7 @@ const Description = () => {
             <div className='absolute   inset-0 w-screen h-screen'>
                 <Image src={'/flares.png'} width={10000} height={1000} alt='flares' className='object-bottom' />
             </div>
-            <div className='text-3xl tracking-widest text-center px-72  text-cswhite'>
+            <div className='text-3xl tracking-widest text-center px-4 md:px-8  xl:px-72  text-cswhite'>
                 Explore infinite possibilities, we empower organizations to be
                 more advanced stream lined and competitive for the digital era
                 through technology.

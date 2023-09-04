@@ -22,7 +22,6 @@ const Landing = () => {
 
         const globeP = globeRef.current.getBoundingClientRect()
         const titleP = document.getElementsByClassName('circle2')[0].getBoundingClientRect()
-        console.log(globeP);
         tl.to(
             globeRef.current,
             {
@@ -44,7 +43,7 @@ const Landing = () => {
     }, [])
 
     return (
-        <div className='px-4 pt-6 md:pt-10 flex justify-evenly  flex-grow main'>
+        <div className='px-4  flex justify-evenly  items-center flex-grow main'>
             <div className='md:w-1/2'>
                 <motion.div
                     initial={{ x: '-5rem', opacity: 0 }}
@@ -106,7 +105,7 @@ const Landing = () => {
                     </motion.div>
                 </motion.div>
             </div>
-            <div className='hidden md:flex  '>
+            <div className='scale-[4] sm:scale-100 md:flex  '>
                 <motion.div className='w-fit drop-shadow-2xl'
                     initial={{ x: '5rem', opacity: 0, rotate: '45deg' }}
                     whileInView={{ x: '0', opacity: 100, rotate: '0' }}
@@ -117,7 +116,7 @@ const Landing = () => {
                         delay: 0.2
                     }}>
                     {/* add the ref attribute to the image element */}
-                    <Image id='lGlobe' ref={globeRef} className='relative z-20 hover:scale-110 duration-300 animate-pulse' src={'/globe.png'} width={400} alt='main phone' height={400} />
+                    <Image id='lGlobe' ref={globeRef} className='relative z-20  sm:scale-100 hover:scale-110 duration-300 opacity-40 md:animate-pulse' src={'/globe.png'} width={400} alt='main phone' height={400} />
                 </motion.div>
             </div>
         </div>

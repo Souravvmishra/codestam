@@ -43,7 +43,6 @@ const Navbar = () => {
                 // Scrolling up
                 setShow(false)
             }
-
             setPrevScrollPos(currentScrollPos);
         }
 
@@ -58,7 +57,7 @@ const Navbar = () => {
 
 
     return (
-        <div id="navBar" className={`md:sticky   top-0 z-10 duration-500 px-4 md:px-10 xl:px-16 md:${show ? '-translate-y-24' : 'translate-y-0  '}`}>
+        <div id="navBar" className={`md:sticky   top-0 z-10 duration-500 px-4 md:px-10 xl:px-16 ${show ? 'md:-translate-y-24' : 'md:translate-y-0  '}`}>
             {/* component */}
             <nav className={` flex justify-between items-center py-4  `}>
                 <Link className="text-2xl font-bold leading-none flex  justify-center items-center space-x-4 " href="/">
